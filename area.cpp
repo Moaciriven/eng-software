@@ -55,6 +55,8 @@ public:
 };
 
 class CalculadoraArea {
+
+    
 public:
     void calcularArea(const AreaCalculavel& forma) const {
         cout << "Area: " << forma.calcularArea() << endl;
