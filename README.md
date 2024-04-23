@@ -18,15 +18,20 @@ O código não está completamente fechado para modificação, pois se novas for
 
 As classes Triangulo, Quadrado, Retangulo, e Circulo substituem a classe base AreaCalculavel sem alterar o comportamento esperado.
 
+- Modificação
+  O princípio da Substituição de Liskov (LSP) é violado porque a classe TrianguloEstranho não pode ser substituída pela
+  classe base Triangulo sem alterar o comportamento esperado do programa.
+
 ## Princípio da Segregação de Interface (ISP - Interface Segregation Principle)
 
 As interfaces (AreaCalculavel) são segregadas para que cada classe implemente apenas os métodos necessários para sua funcionalidade específica.
+
+- Modificação
+  O princípio da Segregação de Interface (ISP) é violado porque a classe triangulo possui um método sem relevancia para todas as classes implementadas na interface "AreaCalculavel".
 
 ## Princípio da Inversão de Dependência (DIP - Dependency Inversion Principle)
 
 Este princípio não está totalmente seguido, pois a classe CalculadoraArea está fortemente acoplada às implementações concretas (Triangulo, Quadrado, Retangulo, Circulo) ao invés de depender de abstrações. Uma abordagem melhor seria receber uma interface genérica como parâmetro, permitindo que diferentes implementações sejam usadas sem modificar CalculadoraArea.
 
 - Correções
-  Para seguir o DIP, a classe CalculadoraArea deve depender de abstrações em vez de implementações concretas. Podemos passar um ponteiro ou uma referência para FormaGeometrica como parâmetro      para o método calcularArea()
-
-Portanto, o código segue parcialmente os princípios SOLID, mas há espaço para melhorias, especialmente em relação ao princípio da abertura/fechamento e da inversão de dependência.
+  Para seguir o DIP, a classe CalculadoraArea deve depender de abstrações em vez de implementações concretas. Podemos passar um ponteiro ou uma referência para FormaGeometrica como parâmetro      para o método calcularArea().
