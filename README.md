@@ -1,4 +1,4 @@
-# eng-software
+# Engenharia de software
 ## Princípios SOLID no Projeto
 
 Este projeto busca seguir os princípios SOLID, uma série de diretrizes de design de software que visam criar código mais legível, flexível e fácil de manter. Abaixo estão algumas observações sobre como esses princípios são aplicados neste código:
